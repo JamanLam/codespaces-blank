@@ -1,0 +1,292 @@
+:root {
+	/** Colors*/
+	--onyx: hsl(0, 0%, 25%);
+	--azure: hsl(219, 77%, 60%);
+	--white: hsl(0, 0%, 100%);
+	--platinum: hsl(0, 0%, 22%);
+	--gainsboro: hsl(0, 0%, 90%);
+	--red-salsa: hsl(0, 77%, 60%);
+	--dim-gray: hsl(0, 0%, 39%);
+	--davys-gray: hsl(0, 0%, 30%);
+	--spanish-gray: hsl(0, 0%, 62%);
+	--quick-silver: hsl(0, 0%, 64%);
+
+	/** Typography*/
+	--fs-28: 28px;
+	--fs-24: 24px;
+	--fs-18: 18px;
+	--fs-15: 15px;
+	--fs-14: 14px;
+
+	--fw-5: 500;
+	--fw-6: 600;
+	--fw-7: 700;
+
+	/** Others */
+	--px: 40px;
+	--r: 5px;
+}
+
+html { font-family: 'Source Sans 3', sans-serif; }
+
+.product-name br {
+    margin-bottom: 0.2em;
+  }
+
+.container {
+	max-width: 1440px;
+	min-height: 100vh;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.heading {
+	justify-content: flex-start;
+	padding-top: var(--px);
+	display: flex;
+	margin-left: 40px;
+	gap: 15px;
+}
+
+.heading ion-icon {
+	font-size: 35px;
+}
+
+.item-flex {
+	display: flex;
+	flex-grow: 1;
+}
+
+.checkout {
+	width: 60%;
+	padding: 40px var(--px);
+	background: var(--white);
+	border-right: 1.5px solid var(--gainsboro);
+	flex-direction: column;
+}
+
+.cart {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.product-card .card {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 50px;
+	margin-bottom: 10px;
+	border-radius: 12px;
+	box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease-out;
+}
+
+.product-img {
+	border-radius: 8px;
+	width: 200px;
+	height: 150px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-box img {
+	object-fit: contain;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.card .detail .product-name {
+	font-weight: 600;
+	font-size: 20px;
+	letter-spacing: 0.5px;
+	color: black;
+	margin-bottom: 8px;
+	margin-top: auto;
+}
+
+.price {
+	font-weight: 400;
+	font-size: 19px;
+	letter-spacing: 0.5px;
+	color: var(--dim-gray);
+	margin-bottom: 20px;
+}
+
+.wrapper-flex {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+}
+
+.wrapper-flex input {
+	padding: 12px 15px;
+	font-weight: var(--fw-6);
+	letter-spacing: 2px;
+}
+
+.product-qty {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.product-qty button {
+	background: transparent;
+	padding: 1px;
+	border: none;
+	border-radius: var(--r);
+	display: flex;
+	justify-content: center;
+}
+
+.decrement:active,
+.increment:active {
+	transform: scale(0.8);
+}
+
+.decrement:hover ion-icon,
+.increment:hover ion-icon {
+	transform: scale(1.8);
+}
+
+.decrement:hover .quantity,
+.increment:hover .quantity {
+	font-size: 22px;
+}
+
+.decrement,
+.increment {
+	--ionicon-stroke-width: 40px;
+	font-size: 22px;
+}
+
+.cancel-btn {
+	width: 30px;
+	height: 30px;
+	border: none;
+	border-radius: var(--r);
+	cursor: pointer;
+	font-size: 18px;
+	align-content: center;
+	margin-left: auto;
+	padding-right: 50px;
+	background-color: transparent;
+}
+
+.cancel-btn:hover ion-icon {
+	transform: scale(1.8);
+}
+
+.cancel-btn:active ion-icon {
+	transform: scale(0.8);
+}
+
+.info {
+	position: relative;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-self: flex-start;
+	margin-left: 40px;
+}
+
+.payment-method,
+.delivery-location {
+	font-size: 15px;
+	color: #b0b0b0;
+	font-weight: 600;
+}
+
+.delivery-location {
+	padding-top: 26px;
+}
+
+.option {
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 20px;
+	border: 1.5px solid #fcbe03;
+	border-radius: 12px;
+	margin-bottom: 38px;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	letter-spacing: 0.5px;
+}
+
+.option ion-icon {
+	color: var(--davys-gray);
+	padding: 10px;
+	border-radius: var(--r);
+	font-size: 22px;
+}
+
+.change-option-btn {
+	background: transparent;
+	color: black;
+	padding-right: 15px;
+	border: none;
+	cursor: pointer;
+	align-content: center;
+	margin-left: auto;
+}
+
+.change-option-btn:active ion-icon {
+	transform: scale(0.8);
+}
+
+.change-option-btn ion-icon {
+	font-size: 18px;
+	align-items: right;
+}
+
+.totals {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-bottom: 40px;
+}
+
+.subtotal,
+.shipping {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+.total {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+button[type="submit"] {
+	width: 100%;
+	background-color: #fcbe03;
+	color: black;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 18px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	align-content: center;
+	margin-bottom: 250px;
+	transition: transform 0.2s ease-out;
+	position: relative;
+}
+
+button[type="submit"]:hover {
+	transform: scale(0.6);
+}
